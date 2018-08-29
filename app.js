@@ -26,7 +26,7 @@ function getTimeDifference(start, end) {
 
 let timer = setInterval(function() {
   const startDate = new Date();
-  const endDate = new Date("Aug 29 2018 19:00:00");
+  const endDate = new Date("Aug 29 2018 17:41:35");
   let timeDifferenceObj = getTimeDifference(startDate, endDate);
   timerDayEl.textContent = timeDifferenceObj.days;
   timerHourEl.textContent = timeDifferenceObj.hours;
@@ -46,24 +46,38 @@ let timer = setInterval(function() {
   if (timerSecondEl.textContent < 10) {
     timerSecondEl.textContent = "0" + timeDifferenceObj.seconds;
   }
+
+  if (timerDayEl.textContent === "00" &&
+    timerHourEl.textContent === "00" &&
+    timerMinuteEl.textContent === "00" &&
+    timerSecondEl.textContent === "00") {
+    clearInterval(timer)
+  }
 },1000)
 
-// function addS () {
-//   if (timerDayEl.textContent = "01") {
-//     timerLabelDayEl.textContent;
-//   } else {
-//     timerLabelDayEl.textContent = timerLabelDayEl.textContent + "s"
-//   };
-//   if (timerHourEl.textContent = "01") {
-//     timerLabelHourEl.textContent = timerLabelHourEl.textContent;
-//   } else {
-//     timerLabelHourEl.textContent = timerLabelHourEl.textContent + "s";
-//   };
-//   if (timerMinuteEl.textContent != "01") {
-//     timerLabelMinuteEl.textContent = timerLabelMinuteEl.textContent + "s";
-//   };
-//   if (timerSecondEl.textContent != "01") {
-//     timerLabelSecondEl.textContent = timerLabelSecondEl.textContent + "s";
-//   }
-// }
-// addS();
+function addS () {
+  if (timerDayEl.textContent === "01") {
+    timerLabelDayEl.textContent;
+  } else {
+    timerLabelDayEl.textContent = timerLabelDayEl.textContent + "s";
+  };
+
+  if (timerHourEl.textContent === "01") {
+    timerLabelHourEl.textContent;
+  } else {
+    timerLabelHourEl.textContent = timerLabelHourEl.textContent + "s"
+  };
+
+  if (timerMinuteEl.textContent === "01") {
+    timerLabelMinuteEl.textContent;
+  } else {
+    timerLabelMinuteEl.textContent = timerLabelMinuteEl.textContent + "s"
+  };
+
+  if (timerSecondEl.textContent === "01") {
+    timerLabelSecondEl.textContent;
+  } else {
+    timerLabelSecondEl.textContent = timerLabelSecondEl.textContent + "s"
+  }
+}
+addS();
