@@ -1,0 +1,71 @@
+/*
+google-green: #008744;
+google-blue: #0057e7;
+google-red: #d62d20;
+google-yellow: #ffa700;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Calibri", monospace;
+  background: #eee;
+}
+main {
+  margin-top: 1rem;
+}
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* THE TIMER ITSELF */
+.timer {
+  /*background: rgba(0,87,231,.7);*/
+  /*background: #ffa700;*/
+  background: #1D1D2C;
+  padding: 2rem;
+  border-radius: 4px;
+  height: 560px;
+}
+.timer__header {
+  text-align: center;
+  /*text-decoration: underline;*/
+  color: #fff;
+  border: 3px solid #fff;
+}
+.timer__body {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-around;
+}
+.timer__day,
+.timer__hour,
+.timer__minute,
+.timer__second,
+.colon {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.timer__day,
+.timer__hour,
+.timer__minute,
+.timer__second {
+
+  border-radius: 50%;
+  /*border: 4px solid #d62d20;*/
+  background: #ffa700;
+  /*border: 3px dotted #fff;*/
+  padding: 2rem;
+}
+.timer__label {
+  letter-spacing: 1px;
+  margin: .7rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
